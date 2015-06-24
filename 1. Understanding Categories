@@ -1,0 +1,45 @@
+§ Understanding Categories
+
+Category is an abstract algebraic notion for a collection of labeled transitions that can be composed chainwise as long as source type of each transition in chain matches the target type of the next one.
+
+§§ Finite categories
+As first example one should also handle the finite case: write a generator for all categories with utmost n transitions and display the first dozen as diagrams. Already at this point one should introduce structure-preserving maps of categories (which are called functors) and study which finite categories can be mapped to the other ones.
+
+§§ Tangle categories
+One of the simplest cases to understand is the category of tangles that can be used to describe knots and braids. Types of this category are finite sets of points, transitions are tangles that connect source points with target points. Tangles can be composed by clueing. There is also a tangle with zero source points and two target points (called cup) and a one with two source points and zero target points (called cap), there are three ways to connect tangle between two two-point sets: two parallel lines, and two types of crossed lines (depending on which line is above). If a chain of transitions begins and ends with zero points, we have a knot. An infinite chains can be used to describe braids. It's pretty easy to describe this whole category in terms of generators and relations between them (i.e. equations which tell when two descriptions in terms of generators describe the same thing).
+
+It's worth knowing that there is such a category and its higher dimensional analogons: most notably categories nCob of cobordisms, a category where types are finite collections of compact (n - 1)-dimensional manifolds (collections of circles in 2-dimensional case) and transitions are n-dimensional manifolds-with-boundary connecting source- and target manifolds. These are examples of quite natural and easy-to-understand categories which are _not_ categories of maps between sets.
+
+This would be the right point to discuss that equations we impose on categories have form of commutative diagrams and in this way any equation is characterised by a finite category, and its solution by a functor!
+
+§§ Linear categories
+Now after studying them one should consider the elementary motivation for categories from linear algebra: invertible square matrices form a group, square matricies form a monoid, what do generic (i.e. in general rectangular) matrices form? They form a category known as Vec_K_, where types are finite-dimensional vector spaces over K, and transitions are linear maps between them. This categories also have a F1-analog which is arguably the most fundamental category whatsoever: the category FinSet* of finite sets and partial maps between them.
+
+This categories should be studied in most precise detail just to have most natural examples to test hypotheses with.
+
+There is a book called "Conceptual Mathematics: Introduction to categories" by W. Lawvere which must be mentioned in this context, the examples from this book are vital for understanding categories at large. This book also introduces a couple of universal constructions such as products, coproducts and various other types of limits.
+
+§§ Concrete categories
+Abstract algebra (or more generaly, model theory) considers sets with additional structure (it might be the pointed set structure, group structure, field structure, topological set structure and lots of others) and singles out structure-preserving maps. This gives a vast source of categories like Grp, Vec, Top etc that contain structure-preserving maps as transitions and structured sets as types. Last but not least, Cat, the category of all categories.
+
+Structured finite sets are of particular interest because their structures can be efficiently enumerated! There is a notion of combinatorial species (and more generally "stuff types") which describe structures associated to finite sets, e.g. we may associate to a finite set with n elements all permutations of n elements, or all partitions of an n-element set, or set of all graphs with n vertices, all finite projective planes with n points, or all group-structures with n elements. By repeating the story we may associate sets of all graph colorings to graphs, all decompositions two finite groups etc. This approach can be also applied to finite vector spaces and in particular be used to study combinatorics of particle entanglement.
+
+This gives a classification for concrete categories (i.e. categories of structured sets) with finite (up to isomorphism at least) number of types, but without this restriction the landscape of concrete categories is immensly vast.
+
+Here one might want to talk about representability of generic categories, most notably about Yoneda lemma and representable functors, abstract points, subobject classifiers.
+
+§§ Categories in Homological Algebra and Natural Transformations
+Here one should consider the original motivation for the development of category theory: the urge to formalize the notion of natural transformation which appears so naturally in homological algebra.
+
+§§ Free cats, Product cats, Functor cats/Presheaves, Quotient Cats, Comma Cats, Fibrations
+At this point one could study construction of categories from existing ones. It's also the right point to study notions of equalizers and coequalizers, general limits and colimits, ends, coends, pullbacks, pushouts and most notably Kan extensions.
+
+§§ Monoidal categories, Internal structures, Internal languages
+Besides discussing the notions in the subsection title, here one should study cartesian closedness, adjoint functors, monads, algebras over monads, enriched categories, 2-categories (categories enriched over Cat), m-tupled n-categories in general. One should mention the pursue to define the self-enriched ∞-Category of ∞-Categories.
+
+§§ Locally Cartesian Closed Categories, Topoi and Type Theories
+Here one can follow the corresponding part of the Scott-Lambek's book "Introduction to higher order categorical logic", with addendum about more recent Awodey's result on adequacy and completeness of elementary topoi for model theory:
+
+Elementary topoi are locally-cartesian closed categories with subobject classifier, they play the role of "abstract categories of sets" where the whole model theory can be carried out, i.e. all finite order theories can be defined internally to them (including topological spaces etc). They are adequate context for doing model theory since syntactic notion of provability (of any given statement in a given theory) and semantic notion of truth (of the same statement in all models of the same theory) coincide.
+
+§§ [Advanced] Relative Monads (Modalities) and synthetic theories (cohesion, Grothendieck topology), sheaves, stacks.
